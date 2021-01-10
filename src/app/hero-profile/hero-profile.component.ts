@@ -1,15 +1,22 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-hero-profile',
-  templateUrl: './hero-profile.component.html',
-  styleUrls: ['./hero-profile.component.css']
+  selector: "app-hero-profile",
+  template: `
+    <div class="hero-profile">
+      <h3>Featured Hero Profile</h3>
+      <h4>{{ data.name }}</h4>
+
+      <p>{{ data.bio }}</p>
+
+      <strong>Hire this hero today!</strong>
+    </div>
+  `,
+  styleUrls: ["./hero-profile.component.css"]
 })
 export class HeroProfileComponent implements OnInit {
-@Input() data: any;
-  constructor() { }
+  @Input() data: any;
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
